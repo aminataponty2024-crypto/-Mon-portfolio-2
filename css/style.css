@@ -1,0 +1,398 @@
+/* ==========================================================
+   1. VARIABLES DE COULEURS ET CONFIGURATION (Palette Mauve)
+   ========================================================== */
+:root {
+    --fond-page: #8E24AA;        /* Mauve très clair et lumineux pour le fond */
+    --texte-sombre: #FFFFF;     /* Violet très foncé presque noir pour la lisibilité */
+    --accent-mauve: #b782c5;     /* Mauve vif pour les boutons et éléments clés */
+    --mauve-leger: #CE93D8;      /* Mauve pastel pour les survols */
+    --blanc-pur: #a0c2c7a9;        /* Pour les cartes et sections */
+    --gris-leger: #5b4b5e;       /* Pour les bordures discrètes */
+}
+
+/* Reset de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--fond-page);
+    color: var(--texte-sombre);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ==========================================================
+   2. TYPOGRAPHIES ET CENTRAGE GLOBAL
+   ========================================================== */
+h1, h2, h3, p {
+    text-align: center; /* Centre TOUT le texte par défaut */
+    margin-bottom: 1rem;
+}
+
+h1 { 
+    font-size: 2.5rem; 
+    color: var(--accent-mauve); /* H1 en mauve vif */
+}
+
+h2 { 
+    font-size: 1.8rem; 
+    color: var(--texte-sombre);
+}
+
+h3 { 
+    font-size: 1.3rem; 
+    color: var(--texte-sombre);
+}
+
+a {
+    color: var(--accent-mauve);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: var(--mauve-leger);
+}
+
+/* ==========================================================
+   3. MENU DE NAVIGATION
+   ========================================================== */
+.navigation {
+    background-color: var(--texte-sombre);
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centre les liens du menu */
+    gap: 30px;
+    padding: 20px;
+}
+
+.navigation a {
+    color: var(--blanc-pur);
+    font-weight: 600;
+}
+
+.navigation a:hover {
+    color: var(--mauve-leger);
+}
+
+/* ==========================================================
+   4. STRUCTURE DU CONTENU
+   ========================================================== */
+main {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre les éléments dans le main */
+}
+
+section {
+    background-color: var(--blanc-pur);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin-bottom: 40px;
+    width: 100%;
+    text-align: center; /* Centre tout dans les sections */
+}
+
+/* ==========================================================
+   5. CARTES D'EXPERTISE ET PROJETS
+   ========================================================== */
+.expertises-container, .projets-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centre les cartes */
+    gap: 30px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.carte-expertise, .carte-projet {
+    background-color: #7e13b4;
+    border: 1px solid var(--gris-leger);
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.carte-expertise:hover, .carte-projet:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-mauve);
+}
+
+/* ==========================================================
+   6. FORMULAIRE DE CONTACT (Tout centré)
+   ========================================================== */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre le formulaire */
+    gap: 15px;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.form-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre les labels et inputs */
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--gris-leger);
+    border-radius: 6px;
+    text-align: center; /* Centre le texte à l'intérieur */
+}
+
+input:focus, textarea:focus {
+    border-color: var(--accent-mauve);
+    outline: none;
+}
+
+button {
+    background-color: var(--accent-mauve);
+    color: var(--blanc-pur);
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: var(--mauve-leger);
+}
+
+/* ==========================================================
+   7. PIED DE PAGE (FOOTER)
+   ========================================================== */
+.mon-footer {
+    background-color: var(--texte-sombre);
+    color: var(--blanc-pur);
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+    font-size: 0.9rem;
+}
+
+
+/* ==========================================================
+   1. VARIABLES ET CONFIGURATION (Thème Mauve)
+   ========================================================== */
+:root {
+    --fond-page: #FDFBFE;        /* Fond très clair légèrement mauve */
+    --texte-sombre: #2A085C;     /* Violet très foncé pour la lisibilité */
+    --accent-mauve: #8E24AA;     /* Mauve vif pour les titres et boutons */
+    --gris-leger: #E1BEE7;       /* Couleur des bordures douces */
+}
+
+/* Reset de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--fond-page);
+    color: var(--texte-sombre);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre tout le contenu de la page */
+    min-height: 100vh;
+}
+
+/* ==========================================================
+   2. TYPOGRAPHIES ET CENTRAGE GLOBAL
+   ========================================================== */
+h1, h2, h3, p {
+    text-align: center !important; /* Force le texte au milieu partout */
+    margin-bottom: 1rem;
+}
+
+h1 { 
+    font-size: 2.5rem; 
+    color: var(--accent-mauve) !important; /* Force la couleur mauve */
+}
+
+h2 { 
+    font-size: 1.8rem; 
+    color: var(--texte-sombre);
+    border: none !important; /* Supprime définitivement les traits sous les titres */
+}
+
+h3 { 
+    font-size: 1.3rem; 
+    color: var(--texte-sombre);
+}
+
+/* ==========================================================
+   3. MENU DE NAVIGATION
+   ========================================================== */
+.navigation {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centre les liens du menu */
+    gap: 30px;
+    padding: 20px;
+    background-color: var(--fond-page);
+}
+
+.navigation a {
+    color: var(--texte-sombre);
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.navigation a:hover {
+    color: var(--accent-mauve);
+}
+
+/* ==========================================================
+   4. STRUCTURE DU CONTENU
+   ========================================================== */
+main {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre les sections sur la page */
+}
+
+section {
+    width: 100%;
+    text-align: center; /* Centre le contenu dans les sections */
+    margin-bottom: 40px;
+}
+
+/* ==========================================================
+   5. LES CARTES (EXPERTISES ET PROJETS) COMME SUR TA PHOTO
+   ========================================================== */
+.expertises-container, .projets-container {
+    display: flex !important;
+    flex-direction: row !important; /* Force l'alignement sur une ligne */
+    justify-content: center !important; /* Centre les cartes au milieu */
+    gap: 30px !important; /* Espace entre les boîtes */
+    width: 100% !important;
+    margin-top: 30px;
+    flex-wrap: wrap; /* Permet de s'adapter aux petits écrans */
+}
+
+.carte-expertise, .carte-projet {
+    background-color: #FDFBFE;
+    border: 1px solid var(--gris-leger);
+    border-radius: 12px;
+    padding: 30px;
+    width: 320px !important; /* Taille de tes cases sur la photo */
+    text-align: center !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.carte-expertise:hover, .carte-projet:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(142, 36, 170, 0.1);
+}
+
+/* Gestion des couleurs à l'intérieur des cartes */
+.carte-expertise h3, .carte-projet h3 {
+    color: var(--texte-sombre) !important;
+    margin-bottom: 15px;
+}
+
+.carte-expertise p, .carte-projet p {
+    color: #6A4C93 !important; /* Mauve un peu plus doux pour les descriptions */
+    font-size: 0.95rem;
+}
+
+/* ==========================================================
+   6. FORMULAIRE DE CONTACT (CENTRE ET MAUVE)
+   ========================================================== */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--gris-leger);
+    border-radius: 8px;
+    text-align: center; /* Centre le texte tapé par l'utilisateur */
+}
+
+input:focus, textarea:focus {
+    border-color: var(--accent-mauve);
+    outline: none;
+}
+
+button {
+    background-color: var(--accent-mauve);
+    color: #FFFFFF;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: var(--texte-sombre);
+}
+/* Force l'alignement des expertises sur une seule ligne */
+.expertises-container {
+    display: flex !important;
+    flex-direction: row !important; /* Met les cases côte à côte */
+    justify-content: center !important; /* Centre l'ensemble au milieu */
+    gap: 30px !important; /* Recrée le même écart que sur ta page projets */
+    width: 100% !important;
+    margin-top: 30px;
+    flex-wrap: nowrap; /* Interdit le retour à la ligne sur ordinateur */
+}
+
+/* On s'assure que chaque case garde une taille fixe */
+.carte-expertise {
+    background-color: #FDFBFE;
+    border: 1px solid #E1BEE7;
+    border-radius: 12px;
+    padding: 30px;
+    width: 320px !important; /* La même largeur que tes projets */
+    text-align: center !important;
+}
+/* Style pour la photo de profil */
+.photo-profil {
+    width: 200px;           /* Réduit la largeur à 200 pixels */
+    height: 200px;          /* Force la même hauteur pour un carré parfait */
+    object-fit: cover;      /* Empêche de déformer l'image en la recadrant */
+    border-radius: 50%;     /* Rend l'image parfaitement ronde */
+    border: 5px solid #CE93D8; /* Ajoute une bordure mauve pastel (ta variable --mauve-leger) */
+    display: block;         /* Nécessaire pour le centrage */
+    margin: 40px auto;      /* Centre horizontalement et ajoute de l'espace en haut/bas */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Ajoute une petite ombre portée pour le relief */
+}
+.
