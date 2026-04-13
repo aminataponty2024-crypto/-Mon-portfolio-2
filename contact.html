@@ -7,83 +7,95 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <nav class="navigation">
-        <a href="index.html">Accueil</a>
-        <a href="presentation.html">Présentation</a>
-        <a href="projets.html">Projets</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-  <h1 style="text-align: center !important; color: #8E24AA !important; margin-bottom: 30px;">Contact</h1>
-  <div class="contact-principale"></div>
-
-
-     <section class="section-contact container">
-      <h1>Pour me contacter</h1>
-   <p>Étudiante en Génie Logiciel & Cybersécurité, passionnée par le code et la sécurité numérique.</p> 
-
-  <form action="#" method="POST" class="form-contact">
+     <header>
+        <div class="container">
+             <nav>
+                <a href="#" class="logo">AM.<span>Ndiaye</span></a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Accueil</a></li>
+            
+                    <li><a href="competence.html">Competence</a></li>
+                    <li><a href="projet.html">Projet</a></li>
+                    <li><a href="cv.html">Mon CV</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+        
+            </nav>
+        </div>
+    </header>
+    <!-- Contacts Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Me Contacter</h2>
+            </div>
+            
+            <div class="forms-container">
+                <div class="card" style="background: var(--card-bg); padding: 30px; border-radius: 15px; border: 1px solid var(--border-color);">
+                    <h3 style="margin-bottom: 20px;"><i class="fa-solid fa-paper-plane" style="color: var(--accent-color);"></i> Message direct</h3>
+                    <form action="#">
+                        <div class="form-group">
+                            <label for="name">Nom complet</label>
+                            <input type="text" id="name" required placeholder="Ex: Jean Dupont">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Votre Email</label>
+                            <input type="email" id="email" required placeholder="exemple@mail.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Votre Message</label>
+                            <textarea id="message" rows="5" required placeholder="Comment puis-je vous aider ?"></textarea>
+                        </div>
+                        <button type="submit" class="btn" style="width: 100%;">Envoyer le message</button>
+                    </form>
+                    <div style="margin-top: 20px; text-align: center;">
+                        <p style="color: var(--text-muted); margin-bottom: 10px;">Ou discutez directement :</p>
+                        <a href="https://wa.me/221707970894" target="_blank" style="color: var(--whatsapp-green); font-weight: 700;">
     
-    <div class="input-group">
-      <label for="prenom">Prénom *</label>
-      <input type="text" id="prenom" name="prenom" required placeholder="Votre prénom">
-    </div>
+                        </a>
+                    </div>
+                </div>
 
-    <div class="input-group">
-      <label for="nom">Nom *</label>
-      <input type="text" id="nom" name="nom" required placeholder="Votre nom">
-    </div>
-
-    <div class="input-group">
-      <label for="email">Email *</label>
-      <input type="email" id="email" name="email" required placeholder="votre@email.com">
-    </div>
-
-    <div class="input-group">
-      <label for="sujet">Sujet</label>
-      <input type="text" id="sujet" name="sujet" placeholder="Ex : Collaboration, stage, question...">
-    </div>
-
-    <div class="input-group textarea-group">
-      <label for="message">Message *</label>
-      <textarea id="message" name="message" required rows="6" placeholder="Votre message ici..."></textarea>
-    </div>
-
-    <button type="submit" class="btn-envoyer">Envoyer le message <i class="fas fa-paper-plane"></i></button>
- 
-
-    <footer class="mon-footer">
-    <div class="footer-container">
-        
-        <div class="footer-col">
-            <h2 class="footer-logo">B.DIA</h2>
-            
-            
-            <div class="footer-socials">
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="far fa-envelope"></i></a>
-                <a href="https://github.com/fatadia10" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-whatsapp"></i></a>
-            </div>
-            
-            <div class="cv-download-container">
-                <a href="images/mon-cv.pdf" download="CV_Bineta_Dia" class="btn-cv">
-                    <i class="fas fa-download"></i> Télécharger mon CV
-                </a>
+                <div class="card" style="background: var(--card-bg); padding: 30px; border-radius: 15px; border: 1px solid var(--border-color);">
+                    <h3 style="margin-bottom: 20px;"><i class="fa-solid fa-lightbulb" style="color: var(--success);"></i> Demander un projet</h3>
+                    <form action="#">
+                        <div class="form-group">
+                            <label for="p-type">Type de projet</label>
+                            <select id="p-type">
+                                <option>Site Vitrine</option>
+                                <option>E-commerce</option>
+                                <option>Application Web</option>
+                                <option>Audit / Debug</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="budget">Estimation budget</label>
+                            <input type="text" id="budget" placeholder="Optionnel">
+                        </div>
+                        <div class="form-group">
+                            <label for="p-desc">Description du besoin</label>
+                            <textarea id="p-desc" rows="5" placeholder="Décrivez votre vision..."></textarea>
+                        </div>
+                        <button type="submit" class="btn" style="width: 100%; background-color: var(--success);">Soumettre ma demande</button>
+                    </form>
+                </div>
             </div>
         </div>
+    </section>
 
-        
-
-        
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="https://wa.me/221707970894" target="_blank" class="social-icon" style="background: var(--whatsapp-green); color: white;"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="#" class="social-icon"><i class="fa-brands fa-github"></i></a>
+                <a href="#" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+            <p style="margin-bottom: 10px;">Email : <strong>aminataponty2024@gmail.com</strong></p>
+            <p style="margin-bottom: 10px;">Tél / WhatsApp : <strong>+221 70 797 08 94</strong></p>
+            <p style="color: var(--text-muted); font-size: 0.8rem; margin-top: 20px;">&copy; 2024 Aminata Ponty. Tous droits réservés.</p>
         </div>
+    </footer>
 
-    </div>
-
-    <div class="footer-copyright">
-        <p>&copy; Aminata Ndiaye — Tous droits réservés</p>
-    </div>
-</footer>
-  </form>
-</section>
 </body>
 </html>
